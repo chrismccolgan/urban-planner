@@ -21,6 +21,26 @@ namespace Planner
         public Building(string address)
         {
             _address = address;
+            _designer = "Steve Brownlee";
+        }
+        public void Construct()
+        {
+            _dateConstructed = DateTime.Now;
+        }
+        public void Purchase(string person)
+        {
+            _owner = person;
+        }
+        public void Message()
+        {
+            Console.WriteLine($@"
+{_address}
+---------------
+Designed by {_designer}
+Constructed on {_dateConstructed}
+Owned by {_owner}
+{Volume} cubic meters of space
+            ");
         }
     }
 }
